@@ -1,0 +1,120 @@
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+}
+
+.post-wrapper>div {
+    flex: 1;
+}
+
+.post-wrapper>div.post-head {
+    display: flex;
+    padding: 10px
+}
+
+.post-wrapper div.post-head>div {}
+
+.post-wrapper div.post-head>div:first-child {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.post-wrapper div.post-head>div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 0px 0px 10px;
+}
+
+.post-wrapper div.post-head>div:last-child>span:last-child {
+    font-size: 12px;
+    color: grey;
+    margin-top: 5px
+}
+
+/* styling for head ends here */
+
+.post-body>div.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.post-body>div img {
+    width: 100%;
+    height: inherit;
+}
+
+.post-body>div.text-description {
+    padding: 0px 10px 10px 10px;
+    font-size: 15px;
+    font-weight: 350
+}
+
+/* post body styling closde here */
+
+.post-footer-buttons {
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+
+.post-footer-buttons>div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* background: #cccccc; */
+    padding: 8px 0px;
+    position: relative;
+}
+
+.post-footer-buttons>div>span:last-child {
+    margin: 0px 0px 4px 10px;
+}
+
+.post-footer-buttons .post-reacts-emojis {
+    display: flex;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transform: translate(0px, 100px)
+}
+
+.post-like-button:hover .post-reacts-emojis {
+    transform: translate(0px, -40%);
+    transition: 0.4s all cubic-bezier(0.69, 0.03, 0.2, 0.96);
+    transition-delay: .7s;
+}
+
+div.post-reacts-emojis {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    z-index: 99999;
+    border-radius: 2rem;
+    background: #ffffff;
+}
+
+div.post-reacts-emojis>div {
+    margin-left: 5px;
+    transform: translate(0px, 100px)
+}
+div.post-reacts-emojis>div:first-child{
+    margin-left: 0px    
+}
+
+
+.post-like-button:hover div.post-reacts-emojis>div{
+    transform: translate(0px, 0px);
+    transition: 0.4s all cubic-bezier(0.69, 0.03, 0.2, 0.96);
+    transition-delay: .8s;
+    
+}
